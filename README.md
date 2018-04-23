@@ -19,3 +19,5 @@ if you use the cgal library in other modules , you need to add
    bEnableUndefinedIdentifierWarnings = false;
    bUseRTTI = true;
 " to the modules' build.cs file to prevent from "rtti error"
+
+you need to change the “CGALForUE4.19” to the "CGAL"
