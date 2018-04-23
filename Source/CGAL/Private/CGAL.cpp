@@ -7,7 +7,7 @@
 #define LOCTEXT_NAMESPACE "FCGALModule"
 
 
-#ifdefine  TEST_CGAL_CODE //for testing if cgal's lib works fine
+#ifdef  TEST_CGAL_CODE //for testing if cgal's lib works fine
 
 #include <CGAL/Simple_cartesian.h>
 #include <CGAL/centroid.h>
@@ -64,7 +64,7 @@ void FCGALModule::StartupModule()
 	LibraryHandle = !LIBGMP.IsEmpty() ? FPlatformProcess::GetDllHandle(*LIBGMP) : nullptr;
 	LibraryHandle = !LIBMPFR.IsEmpty() ? FPlatformProcess::GetDllHandle(*LIBMPFR) : nullptr;
 	//TestFunc();
-#ifdefine  TEST_CGAL_CODE
+#ifdef  TEST_CGAL_CODE
 	TestFunc();
 #endif
 }
