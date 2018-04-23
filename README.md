@@ -11,3 +11,11 @@ boost for 1.66
 perhaps there will be some mistakes when packaging the project
 
 this plugin for CGAL in UE4.19
+
+
+note:
+if you use the cgal library in other modules , you need to add 
+"  
+   bEnableUndefinedIdentifierWarnings = false;
+   bUseRTTI = true;
+" to the modules' build.cs file to prevent from "rtti error"
