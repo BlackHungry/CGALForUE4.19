@@ -1,7 +1,8 @@
+#include "CGAL.h"
 #include "CGALPrivatePCH.h"
 #include "Core.h"
 #include "ModuleManager.h"
-#include "CGAL.h"
+
 
 
 #define LOCTEXT_NAMESPACE "FCGALModule"
