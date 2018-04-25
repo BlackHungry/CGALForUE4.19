@@ -55,6 +55,10 @@ void FCGALModule::StartupModule()
 	// This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-module
 	FString BaseDir = /*"YOUR UE4 PROJECT PATH/Plugins/CGAL"*/FPaths::Combine(*FPaths::ProjectPluginsDir(),TEXT("CGAL")) ;
 
+	FString LibPath = FPaths::Combine(*BaseDir, TEXT("ThirdParty/CGAL/libraries/Win64"));
+
+	FPlatformProcess::PushDllDirectory(*LibPath);
+	
 	// Add on the relative location of the third party dll and load it
 	FString LIBGMP,LIBMPFR;
 #if PLATFORM_WINDOWS
@@ -68,6 +72,7 @@ void FCGALModule::StartupModule()
 #ifdef  TEST_CGAL_CODE
 	TestFunc();
 #endif
+	FPlatformProcess::PopDllDirectory(*LibPath);
 }
 
 void FCGALModule::ShutdownModule()
