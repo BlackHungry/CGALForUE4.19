@@ -66,6 +66,12 @@ public class CGAL : ModuleRules
             PublicAdditionalLibraries.Add(Path.Combine("libmpfr-4.lib"));
             PublicAdditionalLibraries.Add(Path.Combine("libCGAL_Core-vc140-mt-4.11.1.lib"));
             PublicAdditionalLibraries.Add(Path.Combine("libCGAL-vc140-mt-4.11.1.lib"));
+	    
+	    //set delayload 
+	    PublicDelayLoadDLLs.Add("libgmp-10.dll");
+            PublicDelayLoadDLLs.Add("libmpfr-4.dll");
+            RuntimeDependencies.Add(new RuntimeDependency(LibPath + "libgmp-10.dll"));
+            RuntimeDependencies.Add(new RuntimeDependency(LibPath + "libmpfr-4.dll"));
 		
         }
 
