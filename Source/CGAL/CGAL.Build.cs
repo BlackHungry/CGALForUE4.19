@@ -18,7 +18,8 @@ public class CGAL : ModuleRules
         // For boost:: and TBB:: code
         bEnableUndefinedIdentifierWarnings = false;
         bUseRTTI = true;
-        //bEnableExceptions = true;
+        bEnableExceptions = true;
+	
         Definitions.Add("WIN32");
         Definitions.Add("_WINDOWS");
         Definitions.Add("_CRT_SECURE_NO_DEPRECATE");
