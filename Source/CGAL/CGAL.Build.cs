@@ -71,8 +71,8 @@ public class CGAL : ModuleRules
 	    //set delayload 
 	    PublicDelayLoadDLLs.Add("libgmp-10.dll");
             PublicDelayLoadDLLs.Add("libmpfr-4.dll");
-            RuntimeDependencies.Add(new RuntimeDependency(LibPath + "libgmp-10.dll"));
-            RuntimeDependencies.Add(new RuntimeDependency(LibPath + "libmpfr-4.dll"));
+            RuntimeDependencies.Add(new RuntimeDependency(LibPath + "/libgmp-10.dll"));
+            RuntimeDependencies.Add(new RuntimeDependency(LibPath + "/libmpfr-4.dll"));
 		
         }
 
